@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+
+  .tooltip {
+  position: absolute;
+  background: cornsilk;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+</style>
+	</head>
+	<body>
+		<div id="noSavedToken" hidden>
+			<label for="token">Enter Discord Token (if you trust me XD):</label>
+			<input type="password" id="token"/>
+			<button onclick="makeGraph();">Build Graph!</button>
+		</div>
+		<div id="savedToken" hidden>
+			You have saved data. <button onclick="makeGraph();">Build Graph!</button> <button onclick="clearData();">Clear Data!</button>
+		</div>
+		<div id="status" hidden>
+		</div>
+		<div id="searchdiv" hidden>
+			<label for="search">Search Discord Username:</label>
+			<input type="text" id="search" oninput="searchnodes();"/>
+		</div>
+		<hr>
+		<div id="container"></div>
+		<div id="tooltip" class="tooltip" style="display: none;"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
